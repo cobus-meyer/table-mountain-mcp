@@ -83,7 +83,14 @@ npm run eval -- --descriptions baseline              # compare one-line tool des
 
 ### Results
 
-_Not yet run. Results from the first runs will go here._
+12 cases, 3 runs each, on `claude-haiku-5-5`, run on 2026-11-03.
+
+| Description set | Pass rate | Avg tool calls |
+|---|---|---|
+| `v1` | 100% (36/36) | 1.0 |
+| `baseline` | 92% (33/36) | 0.9 |
+
+The only failure was `last-car` on `baseline`, in all 3 runs: the agent said it had no access to the cable car schedule and never called a tool, because the one-line description only mentions a weather verdict. `v1` names cable car status and hours in its description and passed all 3 runs. With no `v1` failures, nothing changed after these runs.
 
 ## Fixtures
 
