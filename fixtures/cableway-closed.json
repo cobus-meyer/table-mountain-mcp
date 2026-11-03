@@ -53,10 +53,10 @@
   "cableway": {
     "running": false,
     "closedUntil": "2026-11-05",
-    "closureReason": "Annual maintenance",
-    "firstCarUp": null,
-    "lastCarUp": null,
-    "lastCarDown": null
+    "closureReason": "annual maintenance",
+    "firstCarUp": "08:00",
+    "lastCarUp": "19:00",
+    "lastCarDown": "20:00"
   },
   "conditions": {
     "temperatureC": 12,

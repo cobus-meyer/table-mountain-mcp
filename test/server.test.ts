@@ -102,7 +102,20 @@ describe("find_best_day", () => {
   it("adds a cableway note when the cable car is closed", async () => {
     const client = await connect(new StaticVerdictSource(fixture("cableway-closed")));
     const { structuredContent: r } = await call(client, "find_best_day");
-    expect(r.cablewayNote).toMatch(/closed until 2026-11-05: Annual maintenance/);
+    expect(r.cablewayNote).toMatch(/closed for annual maintenance and reopens on 2026-11-05/);
+  });
+
+  it("ranks excellent above good, and blocked last", async () => {
+    const v = fixture("windy-monday");
+    v.week = [
+      { date: "2026-11-02", quality: "blocked", goodHours: 0 },
+      { date: "2026-11-03", quality: "good", goodHours: 12 },
+      { date: "2026-11-04", quality: "excellent", goodHours: 5 },
+    ];
+    const client = await connect(new StaticVerdictSource(v));
+    const { structuredContent: r } = await call(client, "find_best_day");
+    expect(r.days.map((d: any) => d.quality)).toEqual(["excellent", "good", "blocked"]);
+    expect(r.bestDay.quality).toBe("excellent");
   });
 
   it("rejects badly formatted dates with a clear message", async () => {

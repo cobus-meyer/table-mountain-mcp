@@ -26,10 +26,11 @@ export const v1: Descriptions = {
     "For a specific day other than today, or 'which day is best', use find_best_day instead.",
     "Only covers Table Mountain. Don't use it for other places.",
     "Times are Cape Town local time (UTC+2). Check freshness.stale: if true, follow freshness.note and don't present the data as current.",
+    "If cableway.running is false, cableway.closedUntil is the date it reopens, not its last closed day.",
   ].join("\n"),
   bestDay: [
     "Rank the days in tablemountainweather.com's 7-day Table Mountain forecast, best first.",
-    "Each day has a quality rating (best to worst: good, grey, poor, blocked) and goodHours, the number of hours that day rated good for going up.",
+    "Each day has a quality rating (best to worst: excellent, good, grey, poor, blocked) and goodHours, the number of hours that day rated good for going up.",
     "Use for 'which day is best', 'is Saturday any good', or planning a trip this week. Pass `dates` for specific days, or `from`/`to` for a range; with no arguments it ranks every remaining day.",
     "Convert weekday names to YYYY-MM-DD using freshness.todayInCapeTown from any earlier result, or call with no arguments and read the weekday field.",
     "Dates outside the forecast come back in notInForecast: say there's no forecast for them yet instead of guessing. If cablewayNote is set, mention it.",

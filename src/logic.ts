@@ -4,7 +4,7 @@ import { CAPE_TOWN_TZ, type Day, type Verdict } from "./api.js";
 export const STALE_AFTER_MINUTES = 90;
 
 /** The site's day ratings, best first. */
-export const QUALITY_ORDER = ["good", "grey", "poor", "blocked"] as const;
+export const QUALITY_ORDER = ["excellent", "good", "grey", "poor", "blocked"] as const;
 
 export function capeTownDate(at: Date): string {
   // en-CA formats as YYYY-MM-DD
@@ -102,7 +102,7 @@ export function bestDayResult(v: Verdict, now: Date, input: BestDayInput) {
     forecastCovers: covered.length ? { from: covered[0], to: covered[covered.length - 1] } : null,
     cablewayNote:
       cableway && cableway.running === false
-        ? `Cableway closed${cableway.closedUntil ? ` until ${cableway.closedUntil}` : ""}${cableway.closureReason ? `: ${cableway.closureReason}` : ""}. Day ratings are about the weather, so check this before recommending a cable car trip.`
+        ? `Cableway closed${cableway.closureReason ? ` for ${cableway.closureReason}` : ""}${cableway.closedUntil ? ` and reopens on ${cableway.closedUntil}` : ""}. Day ratings are about the weather, so check this before recommending a cable car trip.`
         : null,
     freshness: fresh,
   };
