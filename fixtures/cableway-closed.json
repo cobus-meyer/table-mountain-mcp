@@ -1,0 +1,72 @@
+{
+  "question": "Should I go up Table Mountain today?",
+  "verdict": "no",
+  "headline": "No. Go up on Wednesday instead.",
+  "reasons": [
+    "Wind at 23 km/h with gusts to 67 km/h, enough to spoil the exposed top."
+  ],
+  "warnings": [],
+  "betterDay": {
+    "date": "2026-11-04",
+    "weekday": "Wednesday",
+    "quality": "good",
+    "named": true
+  },
+  "todayIsBest": false,
+  "week": [
+    {
+      "date": "2026-11-02",
+      "quality": "blocked",
+      "goodHours": 0
+    },
+    {
+      "date": "2026-11-03",
+      "quality": "good",
+      "goodHours": 12
+    },
+    {
+      "date": "2026-11-04",
+      "quality": "good",
+      "goodHours": 12
+    },
+    {
+      "date": "2026-11-05",
+      "quality": "blocked",
+      "goodHours": 0
+    },
+    {
+      "date": "2026-11-06",
+      "quality": "poor",
+      "goodHours": 2
+    },
+    {
+      "date": "2026-11-07",
+      "quality": "poor",
+      "goodHours": 2
+    },
+    {
+      "date": "2026-11-08",
+      "quality": "grey",
+      "goodHours": 7
+    }
+  ],
+  "cableway": {
+    "running": false,
+    "closedUntil": "2026-11-05",
+    "closureReason": "Annual maintenance",
+    "firstCarUp": null,
+    "lastCarUp": null,
+    "lastCarDown": null
+  },
+  "conditions": {
+    "temperatureC": 12,
+    "windKmh": 23,
+    "gustsKmh": 67,
+    "cloudCoverPct": 29,
+    "lowCloudPct": 29,
+    "precipitationMm": 0
+  },
+  "tablecloth": null,
+  "observedAt": "2026-11-02T09:00+02:00",
+  "source": "https://tablemountainweather.com"
+}

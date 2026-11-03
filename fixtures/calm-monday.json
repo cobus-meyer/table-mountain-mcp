@@ -1,0 +1,67 @@
+{
+  "question": "Should I go up Table Mountain today?",
+  "verdict": "yes",
+  "headline": "Yes. Today is a good day to go up.",
+  "reasons": [
+    "Light wind and clear skies all day."
+  ],
+  "warnings": [],
+  "betterDay": null,
+  "todayIsBest": true,
+  "week": [
+    {
+      "date": "2026-11-02",
+      "quality": "good",
+      "goodHours": 11
+    },
+    {
+      "date": "2026-11-03",
+      "quality": "good",
+      "goodHours": 12
+    },
+    {
+      "date": "2026-11-04",
+      "quality": "good",
+      "goodHours": 12
+    },
+    {
+      "date": "2026-11-05",
+      "quality": "blocked",
+      "goodHours": 0
+    },
+    {
+      "date": "2026-11-06",
+      "quality": "poor",
+      "goodHours": 2
+    },
+    {
+      "date": "2026-11-07",
+      "quality": "poor",
+      "goodHours": 2
+    },
+    {
+      "date": "2026-11-08",
+      "quality": "grey",
+      "goodHours": 7
+    }
+  ],
+  "cableway": {
+    "running": true,
+    "closedUntil": null,
+    "closureReason": null,
+    "firstCarUp": "08:00",
+    "lastCarUp": "19:00",
+    "lastCarDown": "20:00"
+  },
+  "conditions": {
+    "temperatureC": 19,
+    "windKmh": 8,
+    "gustsKmh": 15,
+    "cloudCoverPct": 5,
+    "lowCloudPct": 0,
+    "precipitationMm": 0
+  },
+  "tablecloth": null,
+  "observedAt": "2026-11-02T09:00+02:00",
+  "source": "https://tablemountainweather.com"
+}
